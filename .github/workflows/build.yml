@@ -21,7 +21,7 @@ jobs:
 
       - name: JSZip local (offline)
         run: |
-          curl -L -o www/jszip.min.js https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js
+          curl --create-dirs -L -o www/jszip.min.js https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js
           sed -i 's#https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js#jszip.min.js#' www/index.html
 
       - run: npm install
